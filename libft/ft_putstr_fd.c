@@ -6,7 +6,7 @@
 /*   By: ldi-fior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:06:45 by ldi-fior          #+#    #+#             */
-/*   Updated: 2024/01/11 12:06:57 by ldi-fior         ###   ########.fr       */
+/*   Updated: 2024/01/17 09:37:09 by ldi-fior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
+	while (s[i] || fd < 0)
 	{
 		write(fd, &s[i], 1);
 		i++;
